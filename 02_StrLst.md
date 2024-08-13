@@ -11,14 +11,6 @@ formula = (11-(sum([(13-i)*int(inp[i]) for i in range(12)])%11))%10
 print(inp[0], inp[1:5], inp[5:10], inp[-2:], formula)
 ```
 
-```python
-id = input()
-
-checksum = (11 - (sum((13 - i) * int(id[i]) for i in range(0,12)) % 11)) % 10
-
-print(f"{id[0]} {id[1:5]} {id[5:10]} {id[10:12]} {checksum}")
-```
-
 ### ​Arabic ​Numerals (​★)
 
 [Instructions](https://2190101.nattee.net/problems/841/get_statement/02_StrList_02.pdf)\
@@ -32,13 +24,6 @@ suf = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', '
 print(n, mid, suf[int(n)])
 ```
 
-```python
-numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-n = input()
-
-print(f"{n} --> {numbers[int(n)]}")
-```
-
 ### ​USDate (​★)
 
 [Instructions](https://2190101.nattee.net/problems/842/get_statement/02_StrList_03.pdf)\
@@ -49,13 +34,6 @@ d, m, y = input().split('/')
 ml = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 print(ml[int(m)-1], str(d)+",", y)
-```
-
-```python
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-date = input().split("/")
-
-print(f"{months[int(date[1]) - 1]} {date[0]}, {date[2]}")
 ```
 
 ### ​NDigits (​★)
@@ -111,11 +89,11 @@ print(u, '+', v, '=', [x+y for x, y in zip(u, v)])
 ```
 
 ```python
-u = [float(i) for i in (input().strip('[]')).split(',')]
-v = [float(i) for i in (input().strip('[]')).split(',')]
+u = list(map(float, input()[1:-1].split(", ")))
+v = list(map(float, input()[1:-1].split(", ")))
+vec_sum = [u[0]+v[0], u[1]+v[1], u[2]+v[2]]
 
-
-print(u, '+', v, '=', [x+y for x, y in zip(u, v)])
+print(f"{u} + {v} = {vec_sum}")
 ```
 
 ### ​Decryption (​★★★)
