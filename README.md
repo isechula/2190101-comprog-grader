@@ -1,3 +1,3 @@
 # 2190101-comprog-grader
 
-answer for chulalongkorn university computer programming(2190101) grader
+Answers to Chulalongkorn University Computer Programming (2190101) grader
