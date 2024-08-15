@@ -10,7 +10,24 @@ formula = (11-(sum([(13-i)*int(inp[i]) for i in range(12)])%11))%10
 
 print(inp[0], inp[1:5], inp[5:10], inp[-2:], formula)
 ```
+```python
+id: list[int | str] = list(map(int, input()))
 
+id_count_sum: int = sum(map( lambda enum: (enum[0] + 2) * enum[1], enumerate(id[::-1]) ))
+
+n12: int = (11 - (id_count_sum % 11)) % 10
+
+id.insert(1, " ")
+id.insert(6, " ")
+id.insert(12, " ")
+
+id.append(" ")
+id.append(n12)
+
+output_id: str = "".join(map(str,id))
+
+print(output_id)
+```
 ### ​Arabic ​Numerals (​★)
 
 [Instructions](https://2190101.nattee.net/problems/841/get_statement/02_StrList_02.pdf)\
@@ -60,7 +77,24 @@ length_difference = length - len(number)
 
 print("0"*length_difference + number)
 ```
+```python
+from itertools import zip_longest
 
+m: str = input()
+n: int = int(input())
+
+m_list: list[int] = list(map(int, m))[::-1]
+
+n_list: list[int] = [0 for _ in range(n)]
+
+zippped_list = zip_longest(m_list, n_list, fillvalue=0)
+
+sum_list: list[int] = list(map(sum, zippped_list))[::-1]
+
+output: str = "".join(map(str, sum_list))
+
+print(output)
+```
 ### ​WeeklySales (​★)
 
 [Instructions](https://2190101.nattee.net/problems/844/get_statement/02_StrList_05.pdf)\
@@ -128,7 +162,21 @@ middle_digits_sum = sum(int(i) for i in middle_digits)
 
 print(f"{middle_digits}{decryption_table[middle_digits_sum % 10]}")
 ```
+```python
+secret: str = input()
+a: str = secret[3::7]
+b: str = secret[7::5]
 
+d: str = str(int(a) + int(b) + 10000)[-4:-1]
+e: int = (sum(map(int,d)) % 10) + 1
+
+# Get ASCII Letter
+f: str = chr(e + 64)
+
+decoded_data: str = d + f
+
+print(decoded_data)
+```
 ### ​Decimal2Fraction (​★★★)
 
 [Instructions](https://2190101.nattee.net/problems/1038/get_statement/02_StrList_08.pdf)\
