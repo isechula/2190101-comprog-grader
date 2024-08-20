@@ -206,3 +206,17 @@ gcd = math.gcd(top, bottom)
 
 print(f"{top//gcd} / {bottom//gcd}")
 ```
+
+```python
+from fractions import Fraction
+
+nums = input().split(',')
+
+numerator = int(nums[0] + nums[1] + nums[2]) - int(nums[0] + nums[1])
+denominator = int('9' * len(nums[2]) + '0' * len(nums[1]))
+frac = str(Fraction(f'{numerator}/{denominator}')).split('/')
+try:
+    print(f'{frac[0]} / {frac[1]}')
+except IndexError:
+    print(f'{frac[0]} / 1')
+```
