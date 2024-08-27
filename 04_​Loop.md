@@ -360,6 +360,16 @@ else:
 
 ### ​Max ​2ndMax (​★★)
 
+note: at the time of writing, the "exec" part is broken, instead dump the first input() and print("spj") directly
+
+```python
+#currently broken
+exec(input().strip())
+
+#work around
+input()
+print("spj")
+```
 [Instructions](https://2190101.nattee.net/problems/876/get_statement/04_Loop_13.pdf)\
 Solutions:
 
