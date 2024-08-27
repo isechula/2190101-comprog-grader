@@ -141,7 +141,30 @@ print(text2)
 Solutions:
 
 ```python
-#Solution Here
+#Please tell me there is a better way to do this...
+keyword = input()
+sentence = input()
+word = ''
+word_list = []
+
+for char in sentence:
+    if char not in "\"(),.' ":
+        word += char
+    else:
+        if word != '':
+            word_list += [word]
+            word = ''
+
+if sentence[-1] not in "\"(),.' ":
+    word_list += [word]
+
+number = 0
+
+for word in word_list:
+    if keyword == word:
+        number += 1
+
+print(number)
 ```
 
 ### ​PrintTriangle (​★)
