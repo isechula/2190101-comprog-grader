@@ -264,7 +264,34 @@ print(encoded)
 Solutions:
 
 ```python
-#Solution Here
+pair = int(input())
+mylist = []
+
+for i in range(pair):
+    mylist += [list(map(int,input().split()))]
+
+command = input()
+X = []
+Y = []
+
+if command == 'Zig-Zag':
+    for i in range(pair):
+        if i%2 == 0:
+            X += [mylist[i][0]]
+            Y += [mylist[i][1]]
+        else:
+            X += [mylist[i][1]]
+            Y += [mylist[i][0]]
+elif command == 'Zag-Zig':
+    for i in range(pair):
+        if i%2 != 0:
+            X += [mylist[i][0]]
+            Y += [mylist[i][1]]
+        else:
+            X += [mylist[i][1]]
+            Y += [mylist[i][0]]
+
+print(min(X),max(Y))
 ```
 
 ### ​Max ​2ndMax (​★★)
