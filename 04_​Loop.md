@@ -384,6 +384,28 @@ for i in range(n-2):
 
 print(largest, second)
 ```
+```python
+# Temporary solution before they fix the exec thingy
+lol = input()
+print('spj')
+n = int(input())
+
+largest = int(input())
+second = int(input())
+
+if second > largest:
+    second,largest = largest,second
+    
+for i in range(n-2):
+    num = int(input())
+    if num >= largest:
+        second = largest
+        largest = num
+    elif num > second:
+        second = num
+
+print(largest, second)
+```
 
 ### ​ZigZag ​2 (​★★★)
 
