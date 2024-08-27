@@ -92,6 +92,28 @@ while not abs(a-10**x) <= (10**-10)*max(a,x**2):
 print(round(x,6))
 ```
 
+```python
+number = float(input())
+lower_bound = 0
+upper_bound = number
+middle = (lower_bound + upper_bound)/2
+guess = 10 ** middle
+
+#while our guess is "not close enough" to the answer
+while abs(number - guess) > 10**-10 * max(number, guess):
+    #if our guess is too high, lower the upper bound
+    #else if our guess is too low, raise the lower bound
+    if guess > number:
+        upper_bound = middle
+    elif guess < number:
+        lower_bound = middle
+        
+    middle = (lower_bound + upper_bound)/2
+    guess = 10 ** middle
+
+print(round(middle,6))
+```
+
 ### ​MCQ (​★)
 
 [Instructions](https://2190101.nattee.net/problems/866/get_statement/04_Loop_03.pdf)\
