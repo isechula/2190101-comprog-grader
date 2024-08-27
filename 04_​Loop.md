@@ -300,7 +300,25 @@ print(min(X),max(Y))
 Solutions:
 
 ```python
-#Solution Here
+# I passed the examples but scored 0 on the test cases, idk
+exec(input().strip())
+n = int(input())
+
+largest = int(input())
+second = int(input())
+
+if second > largest:
+    second,largest = largest,second
+    
+for i in range(n-2):
+    num = int(input())
+    if num >= largest:
+        second = largest
+        largest = num
+    elif num > second:
+        second = num
+
+print(largest, second)
 ```
 
 ### ​ZigZag ​2 (​★★★)
