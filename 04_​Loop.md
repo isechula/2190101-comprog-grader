@@ -103,7 +103,22 @@ else:
 Solutions:
 
 ```python
-#Solution Here
+text = input()
+text2 = ''
+
+for i in range(len(text)):
+    if text[i] == '(':
+        text2 += '['
+    elif text[i] == '[':
+        text2 += '('
+    elif text[i] == ')':
+        text2 += ']'
+    elif text[i] == ']':
+        text2 += ')'
+    else:
+        text2 += text[i]
+
+print(text2)
 ```
 
 ### ​CountWord (​★)
