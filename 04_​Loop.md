@@ -255,6 +255,32 @@ while not abs(a-10**x) <= (10**-10)*max(a,x**2):
 print(round(x,6))
 ```
 
+```python
+number = float(input())
+lower_bound = 0
+#since 1 + log_10(n) is a fancy way of asking how many digits there are in the decimal
+#representation of the number
+#(btw this wouldn't work with float inputs)
+upper_bound = len(str(number))
+    
+middle = (lower_bound + upper_bound)/2
+guess = 10 ** middle
+
+#while our guess is "not close enough" to the answer
+while abs(number - guess) > 10**-10 * max(number, guess):
+    #if our guess is too high, lower the upper bound
+    #else if our guess is too low, raise the lower bound
+    if guess > number:
+        upper_bound = middle
+    elif guess < number:
+        lower_bound = middle
+        
+    middle = (lower_bound + upper_bound)/2
+    guess = 10 ** middle
+
+print(round(middle,6))
+```
+
 ### ​RLE (​★★)
 
 [Instructions](https://2190101.nattee.net/problems/871/get_statement/04_Loop_11.pdf)\
