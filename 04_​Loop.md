@@ -240,7 +240,22 @@ print(round(x,6))
 Solutions:
 
 ```python
-#Solution Here
+string = input()
+encoded = ''
+current = string[0]
+count = 0
+
+for char in string:
+    if char == current:
+        count += 1
+    else:
+        encoded += current + " " + str(count) + " "
+        current = char
+        count = 1
+
+encoded += current + " " + str(count)
+
+print(encoded)
 ```
 
 ### ​ZigZag ​1 (​★★)
