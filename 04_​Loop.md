@@ -189,6 +189,27 @@ for word in word_list:
 print(number)
 ```
 
+```python
+#I don't know if this is exactly "better"
+#It's atleast shorter
+keyword = input()
+
+#filter out special characters
+filtered_sentence = ""
+for letter in input():
+    if letter in "\"\'(),.":
+        filtered_sentence += " "
+    else:
+        filtered_sentence += letter
+
+count = 0
+for word in filtered_sentence.split():
+    if keyword == word:
+        count += 1
+
+print(count)
+```
+
 ### ​PrintTriangle (​★)
 
 [Instructions](https://2190101.nattee.net/problems/869/get_statement/04_Loop_06.pdf)\
