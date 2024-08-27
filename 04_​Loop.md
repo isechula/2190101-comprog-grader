@@ -141,7 +141,7 @@ print(text2)
 Solutions:
 
 ```python
-#Please tell me there is a better way to do this...
+# Please tell me there is a better way to do this...
 keyword = input()
 sentence = input()
 word = ''
@@ -173,7 +173,14 @@ print(number)
 Solutions:
 
 ```python
-#Solution Here
+h = int(input())
+
+print(" "*(h-1)+"*")
+
+for i in range(1,h-1):
+    print(" "*(h-i-1)+"*"+(2*i-1)*" "+"*")
+
+print("*"*(2*h-1))
 ```
 
 ### ​Bisection ​Log10 ​2 (​★★)
