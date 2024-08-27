@@ -44,7 +44,18 @@ print(d)
 Solutions:
 
 ```python
-#Solution Here
+num = []
+
+while True:
+    a = input()
+    if a == 'q':
+        break
+    num += [float(a)]
+
+if num == []:
+    print("No Data")
+else:
+    print(round(sum(num)/len(num),2))
 ```
 
 ### ​Bisection ​Log10 (​★)
