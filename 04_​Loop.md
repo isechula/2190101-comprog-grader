@@ -341,6 +341,23 @@ elif command == 'Zag-Zig':
 print(min(X),max(Y))
 ```
 
+```python
+zig, zag = [], []
+for i in range(int(input())):
+    x, y = [int(j) for j in input().split()]
+    if i % 2 == 0:
+        zig += [x]
+        zag += [y]
+    else:
+        zig += [y]
+        zag += [x]
+    
+if input() == "Zig-Zag":
+    print(min(zig), max(zag))
+else:
+    print(min(zag), max(zig))
+```
+
 ### ​Max ​2ndMax (​★★)
 
 [Instructions](https://2190101.nattee.net/problems/876/get_statement/04_Loop_13.pdf)\
