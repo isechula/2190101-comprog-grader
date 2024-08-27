@@ -84,7 +84,17 @@ print(round(x,6))
 Solutions:
 
 ```python
-#Solution Here
+correct = input()
+student = input()
+score = 0
+
+if len(correct) == len(student):
+    for i in range(len(correct)):
+        if correct[i] == student[i]:
+            score += 1
+    print(score)
+else:
+    print("Incomplete answer")
 ```
 
 ### ​Parentheses (​★)
