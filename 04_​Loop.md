@@ -348,6 +348,39 @@ print(largest, second)
 Solutions:
 
 ```python
-#Solution Here
+red_min,blue_min = map(int,input().split())
+red_max,blue_max = red_min,blue_min
+
+i = 1
+
+while True:
+    command = input()
+    if command == "Zig-Zag" or command == "Zag-Zig":
+        break
+    X,Y = map(int,command.split())
+    if i%2 == 0:
+        if X < red_min:
+            red_min = X
+        elif X > red_max:
+            red_max = X
+        if Y < blue_min:
+            blue_min = Y
+        elif Y > blue_max:
+            blue_max = Y
+    else:
+        if Y < red_min:
+            red_min = Y
+        elif Y > red_max:
+            red_max = Y
+        if X < blue_min:
+            blue_min = X
+        elif X > blue_max:
+            blue_max = X
+    i += 1
+
+if command == "Zig-Zag":
+    print(red_min, blue_max)
+elif command == "Zag-Zig":
+    print(blue_min, red_max)
 ```
 
