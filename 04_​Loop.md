@@ -58,6 +58,20 @@ else:
     print(round(sum(num)/len(num),2))
 ```
 
+```python
+input_string = input()
+count, total = 0, 0
+while input_string != "q":
+    count += 1
+    total += float(input_string)
+    input_string = input()
+
+if count > 0:
+    print(round(total/count,2))
+else:
+    print("No Data")
+```
+
 ### ​Bisection ​Log10 (​★)
 
 [Instructions](https://2190101.nattee.net/problems/865/get_statement/04_Loop_02.pdf)\
