@@ -1,6 +1,6 @@
 ### ​Stirling ​Factorial (​★)
 
-[Instructions](https://2190101.nattee.net/problems/834/get_statement/01_Expr_01.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/01_Expr/01_Expr_01.pdf)\
 Solutions:
 
 ```python
@@ -13,7 +13,7 @@ print(((2*math.pi)**(1/2))*(n**(n+(1/2)))*(math.e**(-n+(1/(12*n)))))
 
 ### ​Quadratic ​Root (​★)
 
-[Instructions](https://2190101.nattee.net/problems/835/get_statement/01_Expr_02.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/01_Expr/01_Expr_02.pdf)\
 Solutions:
 
 ```python
@@ -25,7 +25,7 @@ print(round((-b-((b**2)-(4*a*c))**(1/2))/(2*a), 3), round((-b+((b**2)-(4*a*c))**
 
 ### ​An ​Expression (​★★)
 
-[Instructions](https://2190101.nattee.net/problems/836/get_statement/01_Expr_03.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/01_Expr/01_Expr_03.pdf)\
 Solutions:
 
 ```python
@@ -37,7 +37,7 @@ print(round(value, 6))
 
 ### ​Body ​Surface ​Area (​★★)
 
-[Instructions](https://2190101.nattee.net/problems/837/get_statement/01_Expr_04.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/01_Expr/01_Expr_04.pdf)\
 Solutions:
 
 ```python
@@ -53,7 +53,7 @@ print(f'{mosteller}\n{haycock}\n{boyd}')
 
 ### ​Cubic ​Equation (​★★)
 
-[Instructions](https://2190101.nattee.net/problems/838/get_statement/01_Expr_05.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/01_Expr/01_Expr_05.pdf)\
 Solutions:
 
 ```python
@@ -72,7 +72,7 @@ print(round(answer,3))
 
 ### ​Duration (​★★★)
 
-[Instructions](https://2190101.nattee.net/problems/839/get_statement/01_Expr_06.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/01_Expr/01_Expr_06.pdf)\
 Solutions:
 
 ```python

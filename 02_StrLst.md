@@ -1,6 +1,6 @@
 ### ​CitizenID (​★)
 
-[Instructions](https://2190101.nattee.net/problems/840/get_statement/02_StrList_01.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_01.pdf)\
 Solutions:
 
 ```python
@@ -30,7 +30,7 @@ print(output_id)
 ```
 ### ​Arabic ​Numerals (​★)
 
-[Instructions](https://2190101.nattee.net/problems/841/get_statement/02_StrList_02.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_02.pdf)\
 Solutions:
 
 ```python
@@ -43,7 +43,7 @@ print(n, mid, suf[int(n)])
 
 ### ​USDate (​★)
 
-[Instructions](https://2190101.nattee.net/problems/842/get_statement/02_StrList_03.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_03.pdf)\
 Solutions:
 
 ```python
@@ -55,7 +55,7 @@ print(ml[int(m)-1], str(d)+",", y)
 
 ### ​NDigits (​★)
 
-[Instructions](https://2190101.nattee.net/problems/843/get_statement/02_StrList_04.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_04.pdf)\
 Solutions:
 
 ```python
@@ -97,7 +97,7 @@ print(output)
 ```
 ### ​WeeklySales (​★)
 
-[Instructions](https://2190101.nattee.net/problems/844/get_statement/02_StrList_05.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_05.pdf)\
 Solutions:
 
 ```python
@@ -111,7 +111,7 @@ print(sum(map(int,input().split())))
 
 ### ​AddVector (​★★)
 
-[Instructions](https://2190101.nattee.net/problems/845/get_statement/02_StrList_06.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_06.pdf)\
 Solutions:
 
 ```python
@@ -132,7 +132,7 @@ print(f"{u} + {v} = {vec_sum}")
 
 ### ​Decryption (​★★★)
 
-[Instructions](https://2190101.nattee.net/problems/846/get_statement/02_StrList_07.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_07.pdf)\
 Solutions:
 
 ```python
@@ -179,7 +179,7 @@ print(decoded_data)
 ```
 ### ​Decimal2Fraction (​★★★)
 
-[Instructions](https://2190101.nattee.net/problems/1038/get_statement/02_StrList_08.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_08.pdf)\
 Solutions:
 
 ```python
