@@ -1,6 +1,6 @@
 ### ​BirthdayParadox (​◇◇)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_001.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​001.pdf)\
 Solutions:
 
 ```python
@@ -18,7 +18,7 @@ print(k)
 
 ### ​Partition (​◇◇)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_002.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​002.pdf)\
 Solutions:
 
 ```python
@@ -40,7 +40,7 @@ print(d)
 
 ### ​Average (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_01.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​01.pdf)\
 Solutions:
 
 ```python
@@ -74,7 +74,7 @@ else:
 
 ### ​Bisection ​Log10 (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_02.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​02.pdf)\
 Solutions:
 
 ```python
@@ -116,7 +116,7 @@ print(round(middle,6))
 
 ### ​MCQ (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_03.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​03.pdf)\
 Solutions:
 
 ```python
@@ -135,7 +135,7 @@ else:
 
 ### ​Parentheses (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_04.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​04.pdf)\
 Solutions:
 
 ```python
@@ -159,7 +159,7 @@ print(text2)
 
 ### ​CountWord (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_05.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​05.pdf)\
 Solutions:
 
 ```python
@@ -212,7 +212,7 @@ print(count)
 
 ### ​PrintTriangle (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_06.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​06.pdf)\
 Solutions:
 
 ```python
@@ -228,7 +228,7 @@ print("*"*(2*h-1))
 
 ### ​Bisection ​Log10 ​2 (​★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_10.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​10.pdf)\
 Solutions:
 
 ```python
@@ -283,7 +283,7 @@ print(round(middle,6))
 
 ### ​RLE (​★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_11.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​11.pdf)\
 Solutions:
 
 ```python
@@ -307,7 +307,7 @@ print(encoded)
 
 ### ​ZigZag ​1 (​★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_12.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​12.pdf)\
 Solutions:
 
 ```python
@@ -370,7 +370,7 @@ exec(input().strip())
 input()
 print("spj")
 ```
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_13.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​13.pdf)\
 Solutions:
 
 ```python
@@ -419,7 +419,7 @@ print(largest, second)
 
 ### ​ZigZag ​2 (​★★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_20.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​20.pdf)\
 Solutions:
 
 ```python

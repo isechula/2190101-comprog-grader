@@ -1,6 +1,6 @@
 ### ​Hello (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro_01.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro​01.pdf)\
 Solutions:
 
 ```python
@@ -15,7 +15,7 @@ print("Hello Python.\nWe're using Python 3. ")
 
 ### ​Big ​Numbers (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro_02.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro_​02.pdf)\
 Solutions:
 
 ```python
@@ -36,7 +36,7 @@ print(a, "+", b, "=", a+b, sep="\n")
 
 ### ​Mountain ​Valley (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro_03.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro_​03.pdf)\
 Solutions:
 
 ```python
