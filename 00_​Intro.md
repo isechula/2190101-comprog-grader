@@ -1,6 +1,6 @@
 ### ​Hello (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro​01.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/00_Intro/00_Intro_​01.pdf)\
 Solutions:
 
 ```python

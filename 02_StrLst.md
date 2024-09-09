@@ -1,6 +1,6 @@
 ### ​CitizenID (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​01.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​01.pdf)\
 Solutions:
 
 ```python
@@ -30,7 +30,7 @@ print(output_id)
 ```
 ### ​Arabic ​Numerals (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​02.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​02.pdf)\
 Solutions:
 
 ```python
@@ -43,7 +43,7 @@ print(n, mid, suf[int(n)])
 
 ### ​USDate (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​03.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​03.pdf)\
 Solutions:
 
 ```python
@@ -55,7 +55,7 @@ print(ml[int(m)-1], str(d)+",", y)
 
 ### ​NDigits (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​04.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​04.pdf)\
 Solutions:
 
 ```python
@@ -97,7 +97,7 @@ print(output)
 ```
 ### ​WeeklySales (​★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​05.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​05.pdf)\
 Solutions:
 
 ```python
@@ -111,7 +111,7 @@ print(sum(map(int,input().split())))
 
 ### ​AddVector (​★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​06.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​06.pdf)\
 Solutions:
 
 ```python
@@ -132,7 +132,7 @@ print(f"{u} + {v} = {vec_sum}")
 
 ### ​Decryption (​★★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​07.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​07.pdf)\
 Solutions:
 
 ```python
@@ -179,7 +179,7 @@ print(decoded_data)
 ```
 ### ​Decimal2Fraction (​★★★)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrList/02_StrList_​08.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/02_StrLst/02_StrLst_​08.pdf)\
 Solutions:
 
 ```python
