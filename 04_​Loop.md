@@ -18,7 +18,7 @@ print(k)
 
 ### ​Partition (​◇◇)
 
-[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop__​002.pdf)\
+[Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/04_Loop/04_Loop_​002.pdf)\
 Solutions:
 
 ```python
