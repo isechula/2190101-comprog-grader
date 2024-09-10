@@ -4,7 +4,16 @@
 Solutions:
 
 ```python
-#Solution Here
+string = input()
+found = []
+for i in range(10):
+    if str(i) not in string:
+        found.append(str(i))
+
+if len(found) > 0:
+    print(",".join(found))
+else:
+    print("None")
 ```
 
 ### Nicknames (★)
@@ -13,7 +22,18 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+#(dont worry, I generated them automatically :D)
+full_names = ['Robert', 'William', 'James', 'John', 'Margaret', 'Edward', 'Sarah', 'Andrew', 'Anthony', 'Deborah']
+nicknames = ['Dick', 'Bill', 'Jim', 'Jack', 'Peggy', 'Ed', 'Sally', 'Andy', 'Tony', 'Debbie']
+
+for i in range(int(input())):
+    name = input()
+    if name in full_names:
+        print(nicknames[full_names.index(name)])
+    elif name in nicknames:
+        print(full_names[nicknames.index(name)])
+    else:
+        print("Not found")
 ```
 
 ### Back n Front (★)
@@ -22,7 +42,35 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+#annoyingly confusing question
+data = []
+
+#first set
+for i in range(int(input())):
+    if len(data) % 2 == 0:
+        data.append(int(input()))
+    else:
+        data.insert(0, int(input())) 
+    
+#second set (the pdf doesnt tell you this but if it doesnt exist it will just be an empty string)
+for number in input().split():
+    if len(data) % 2 == 0:
+        data.append(int(number))
+    else:
+        data.insert(0, int(number))
+
+#third set
+while True:
+    number = input()
+    if number == "-1":
+        break
+
+    if len(data) % 2 == 0:
+        data.append(int(number))
+    else:
+        data.insert(0, int(number))
+
+print(data)
 ```
 
 ### Peaks (★)
