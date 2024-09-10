@@ -79,7 +79,16 @@ print(data)
 Solutions:
 
 ```python
-#Solution Here
+#this question is so peak
+data = list(map(int, input().split()))
+print(data)
+count = 0
+
+for i in range(1, len(data)-1):
+    if data[i] > max(data[i-1], data[i+1]):
+        count += 1
+
+print(count)
 ```
 
 ### UniqueCount (★★)
@@ -88,7 +97,19 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+data = [int(i) for i in input().split()]
+data.sort()
+
+unique_numbers = [data[0]]
+for number in data[1:]:
+    #since our data is sorted
+    #a number is new if it isnt the same as
+    #the previous unique number
+    if number != unique_numbers[-1]:
+        unique_numbers.append(number)
+
+print(len(unique_numbers))
+print(unique_numbers[:10])
 ```
 
 ### Collatz (★)
@@ -97,7 +118,16 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+sequence = [int(input())]
+
+while sequence[-1] != 1:
+    last_number = sequence[-1]
+    if last_number % 2 == 0:
+        sequence.append(last_number//2)
+    else:
+        sequence.append(3*last_number + 1)
+
+print("->".join([str(n) for n in sequence][-15:]))
 ```
 
 ### Upgrade (★★)
