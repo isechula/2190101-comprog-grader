@@ -136,7 +136,24 @@ print("->".join([str(n) for n in sequence][-15:]))
 Solutions:
 
 ```python
-#Solution Here
+grade_rankings = ["F", "D", "D+", "C", "C+", "B", "B+", "A"]
+student_ids = []
+grades = []
+
+while True:
+    command = input().split()
+    
+    if command[0] == "q":
+        break
+    
+    student_ids.append(command[0])
+    grades.append(command[1])
+
+for id in input().split():
+    index = student_ids.index(id)
+    grades[index] = grade_rankings[min(grade_rankings.index(grades[index])+1,7)]
+
+print("\n".join([f"{student_ids[i]} {grades[i]}" for i in range(len(student_ids))]))
 ```
 
 ### Upgrade 2 (★★)
@@ -145,7 +162,29 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+grade_rankings = ["F", "D", "D+", "C", "C+", "B", "B+", "A"]
+student_ids = []
+grades = []
+
+while True:
+    command = input().split()
+    
+    if command[0] == "q":
+        break
+    
+    student_ids.append(command[0])
+    grades.append(command[1])
+
+for id in input().split():
+    index = student_ids.index(id)
+    grades[index] = grade_rankings[min(grade_rankings.index(grades[index])+1,7)]
+
+#you could do this alot easier using a sorting "key" parameter of .sort()
+#alternative since you can arrange the data as a tuple (id, grade) then sort
+#but im lazy so this is my solution
+sorted_student_ids = sorted(student_ids)
+for id in sorted_student_ids:
+    print(id, grades[student_ids.index(id)])
 ```
 
 ### Third Closest (★★)
@@ -154,7 +193,18 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+points = []
+for i in range(int(input())):
+    x, y = [float(i) for i in input().split()]
+    
+    distance = (x**2+y**2)**(1/2)
+    
+    #distance, id, x, y
+    points.append([distance, i + 1, x, y])
+
+output_point = sorted(points)[2]
+
+print(f"#{output_point[1]}: ({output_point[2]}, {output_point[3]})")
 ```
 
 ### Cut n Shuffle (★★★)
