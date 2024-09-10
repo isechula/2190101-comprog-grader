@@ -213,7 +213,23 @@ print(f"#{output_point[1]}: ({output_point[2]}, {output_point[3]})")
 Solutions:
 
 ```python
-#Solution Here
+deck = input().split()
+half_length = len(deck)//2
+
+for command in input():
+    if command not in "CS":
+        continue
+    
+    if command == "C":
+        deck = deck[half_length:] + deck[:half_length]
+    else:
+        #dunno if there is an easier way to do this
+        new_deck = []
+        for i in range(half_length):
+            new_deck += [deck[:half_length][i], deck[half_length:][i]]
+        deck = new_deck
+
+print(" ".join(deck))
 ```
 
 ### QueueTicket (★★★)
@@ -222,6 +238,43 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+tickets = []
+
+commands = int(input())
+#first command is always reset
+ticket_number = int(input().split()[1])
+next_ticket_index = 0
+
+for i in range(commands - 1):
+    command = input().split()
+    
+    #you could also do a switch statement
+    
+    #create new ticket
+    if command[0] == "new":
+        #tickets formatted
+        #start, end(-1 as default), id
+        
+        tickets.append([int(command[1]),-1,ticket_number])
+        print(f"ticket {ticket_number}")
+        ticket_number += 1
+    
+    #call the next ticket
+    elif command[0] == "next":
+        print(f"call {tickets[next_ticket_index][2]}")
+        next_ticket_index += 1
+    
+    #fufill last ticket called
+    elif command[0] == "order":
+        ticket = tickets[next_ticket_index-1]
+        ticket[1] = int(command[1])
+        print(f"qtime {ticket[2]} {ticket[1] - ticket[0]}")
+    
+    #print average time to fufill tickets
+    elif command[0] == "avg_qtime":
+        #filter out tickets with end time as -1 (since they arent served)
+        served_tickets = [ticket for ticket in tickets if ticket[1] != -1]
+        average_dt = sum([ticket[1] - ticket[0] for ticket in served_tickets])/len(served_tickets)
+        print(f"avg_qtime {round(average_dt, 4)}")
 ```
 
