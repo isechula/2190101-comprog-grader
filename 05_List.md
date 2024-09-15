@@ -16,6 +16,21 @@ else:
     print("None")
 ```
 
+
+```python
+num = [str(i) for i in range(10)]
+string = input()
+
+for char in string:
+    if char in num:
+        num.remove(char)
+
+if num == []:
+    print("None")
+else:
+    print(",".join(num))
+```
+
 ### Nicknames (★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/05_List/05_List_​12.pdf)\
