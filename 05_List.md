@@ -246,6 +246,35 @@ for command in input():
 print(" ".join(deck))
 ```
 
+```python
+deck = input().split()
+instructions = input()
+
+def cut(cards):
+    l = len(cards)
+    cards = cards[l//2:] + cards[:l//2]
+    return cards
+
+def shuffle(cards):
+    l = len(cards)
+    first = cards[:l//2]
+    last = cards[l//2:]
+    for i in range(l):
+        if i % 2 == 0:
+            cards[i] = first[i//2]
+        else:
+            cards[i] = last[i//2]
+    return cards
+
+for c in instructions:
+    if c == 'C':
+        deck = cut(deck)
+    elif c == 'S':
+        deck = shuffle(deck)
+
+print(" ".join(deck))
+```
+
 ### QueueTicket (★★★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/05_List/05_List_​32.pdf)\
