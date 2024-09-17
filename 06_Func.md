@@ -175,6 +175,7 @@ def perimeter(points):
     #i can avoid having to do an edge case
     for i in range(len(points)):
         total += distance2(points[i - 1], points[i])
+    return total
 ```
 
 ### FourFunctions (★★)
