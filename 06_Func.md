@@ -168,6 +168,15 @@ def perimeter(points):
 exec(input().strip())
 ```
 
+```python
+def perimeter(points):
+    total = 0
+    #since points[-1] is the last point
+    #i can avoid having to do an edge case
+    for i in range(0, len(points)):
+        total += distance2(points[i - 1], points[i])
+```
+
 ### FourFunctions (★★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/06_Func/06_Func_​23.pdf)\
@@ -199,6 +208,16 @@ def sum_square(alist):
     # return a sum of square of each number in alist
     
 exec(input().strip())
+```
+
+```python
+#a few alternative solutions:
+def is_odd(e):
+    #if you like being fun:
+    return not not e & 1
+
+def sum_square(alist):
+    return sum(i * i for i in alist)
 ```
 
 ### Refactor (★★★)
