@@ -16,6 +16,21 @@ else:
     print("None")
 ```
 
+
+```python
+num = [str(i) for i in range(10)]
+string = input()
+
+for char in string:
+    if char in num:
+        num.remove(char)
+
+if num == []:
+    print("None")
+else:
+    print(",".join(num))
+```
+
 ### Nicknames (★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/05_List/05_List_​12.pdf)\
@@ -81,7 +96,6 @@ Solutions:
 ```python
 #this question is so peak
 data = list(map(int, input().split()))
-print(data)
 count = 0
 
 for i in range(1, len(data)-1):
@@ -228,6 +242,35 @@ for command in input():
         for i in range(half_length):
             new_deck += [deck[:half_length][i], deck[half_length:][i]]
         deck = new_deck
+
+print(" ".join(deck))
+```
+
+```python
+deck = input().split()
+instructions = input()
+
+def cut(cards):
+    l = len(cards)
+    cards = cards[l//2:] + cards[:l//2]
+    return cards
+
+def shuffle(cards):
+    l = len(cards)
+    first = cards[:l//2]
+    last = cards[l//2:]
+    for i in range(l):
+        if i % 2 == 0:
+            cards[i] = first[i//2]
+        else:
+            cards[i] = last[i//2]
+    return cards
+
+for c in instructions:
+    if c == 'C':
+        deck = cut(deck)
+    elif c == 'S':
+        deck = shuffle(deck)
 
 print(" ".join(deck))
 ```
