@@ -6,6 +6,9 @@ Solutions:
 ```python
 #the never-ending urge to turn everthing into one liners
 print(bin(sum([int(i, 2) for i in input().split()]))[2:])
+
+#also a one liner :P
+print(bin(sum(map(lambda y: int(y,2),input().split())))[2:])
 ```
 
 ### NextPrime (★)
@@ -33,7 +36,7 @@ def next_prime(N):
     while True:
         #add first since N is exclusive
         N += 1
-        
+
         if is_prime(N):
             return N
 
@@ -41,11 +44,31 @@ def next_twin_prime(N):
     #loop through all future primes, and check if the next prime differs by 2
     while True:
         N = next_prime(N)
-        
+
         if next_prime(N) - N == 2:
             return (N, next_prime(N))
 
 exec(input().strip())
+```
+
+```python
+#method using python comparators
+def next_prime(n):
+    n+=1
+    # means != True
+    while not is_prime(n):
+        n+=1
+    return n
+
+#method without using recursive
+def next_twin_prime(n):
+    n+=1
+    while True:
+        #stops the loop when the condition is met
+        if is_prime(n) and is_prime(n+2):
+            break
+        n+=1
+    return f"({n}, {n+2})"
 ```
 
 ### Function Call (★★)
@@ -109,6 +132,13 @@ sort(scores)
 report(scores[::-1])
 ```
 
+```python
+#from the return values we can replace declaring variables with the function literals
+r = scoring(solution=input(),answers=read_answers())
+sort(r)
+report(reversed(r))
+```
+
 ### Distance (★★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/06_Func/06_Func_​22.pdf)\
@@ -135,4 +165,3 @@ Solutions:
 ```python
 #Solution Here
 ```
-
