@@ -173,7 +173,7 @@ def perimeter(points):
     total = 0
     #since points[-1] is the last point
     #i can avoid having to do an edge case
-    for i in range(0, len(points)):
+    for i in range(len(points)):
         total += distance2(points[i - 1], points[i])
 ```
 
