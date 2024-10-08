@@ -152,6 +152,24 @@ else:
 print(ana)
 ```
 
+```python
+#i know they want me to use unicode but like this is alot easier
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+def count_letters(string):
+    letters = [0] * 26
+    for letter in string.lower():
+        if letter in alphabet:
+            letters[alphabet.index(letter)] += 1
+    return letters
+
+#dunno if ill ever get used to array comparisons looking like this
+if count_letters(input()) == count_letters(input()):
+    print("YES")
+else:
+    print("NO")
+```
+
 ### File Min Max Average (★★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/07_StrFile/07_StrFile_​23.pdf)\
