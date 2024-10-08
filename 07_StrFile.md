@@ -173,7 +173,6 @@ else:
 ### File Min Max Average (★★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/07_StrFile/07_StrFile_​23.pdf)\
-
 data.txt:
 ```
 6230012121 90.0
@@ -199,7 +198,54 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+#formatted such that index-2 = corresponding base pair
+base_pairs = "actg"
+
+#felt like making everything a function today
+def validate(dna):
+    for nucleotide in dna:
+        if nucleotide not in base_pairs:
+            return False
+    return True
+
+def reverse_complement(dna):
+    output = ""
+    for nucleotide in dna:
+        output += base_pairs[base_pairs.index(nucleotide) - 2]
+    return output.upper()[::-1]
+
+def frequency(dna):
+    nucleotides = [0] * 4
+    for nucleotide in dna:
+        nucleotides[base_pairs.index(nucleotide)] += 1
+    return f"A={nucleotides[0]}, T={nucleotides[2]}, G={nucleotides[3]}, C={nucleotides[1]}"
+
+def pair_count(dna, pair):
+    count = 0
+    searched_index = 0
+    while searched_index < len(dna):
+        next_index = dna.find(pair,searched_index)
+        if next_index == -1:
+            break;
+        
+        count += 1
+        searched_index = next_index + 1
+    return count
+
+#part that handles the input
+dna = input().lower().strip()
+
+if not validate(dna):
+    print("Invalid DNA")
+else:
+    command = input().strip()
+    
+    if command == "R":
+        print(reverse_complement(dna))
+    elif command == "F":
+        print(frequency(dna))
+    else:
+        print(pair_count(dna, input().lower().strip()))
 ```
 
 ### Password Strength (★★★)
