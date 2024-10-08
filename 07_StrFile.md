@@ -4,7 +4,17 @@
 Solutions:
 
 ```python
-#Solution Here
+def pluralize(word):
+  new_word = ''
+  if word[-1] == 's' or word[-1] == 'x' or word[-2:] == 'ch':
+    new_word = word + 'es'
+  elif word[-1] == 'y' and word[-2] not in 'aeiou':
+    new_word = word[:-1] + 'ies'
+  else:
+    new_word = word + 's'
+  return new_word
+
+print(pluralize(input()))
 ```
 
 ### CamelCase (★)
@@ -13,7 +23,32 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+sentence = input()
+new_sentence = ''
+
+alpha_upper = [chr(i) for i in range(65,91)]
+alpha_lower = [chr(i) for i in range(97,123)]
+
+for char in sentence:
+    if char in alpha_lower or char in map(str,(range(10))):
+        new_sentence += char
+    elif char in alpha_upper:
+        new_sentence += alpha_lower[alpha_upper.index(char)]
+    else:
+        new_sentence += ' '
+
+new_sentence = new_sentence.split()
+
+newer_sentence = ''
+for word in new_sentence:
+    if word[0] in alpha_lower:
+        word = alpha_upper[alpha_lower.index(word[0])] + word[1:]
+    newer_sentence += word
+
+if newer_sentence[0] in alpha_upper:
+    newer_sentence = alpha_lower[alpha_upper.index(newer_sentence[0])] + newer_sentence[1:]
+
+print(newer_sentence)
 ```
 
 ### Rot13 (★★)
@@ -22,7 +57,26 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+def rot13(s):
+    s2 = ''
+    for c in s:
+        if ord(c) >= 65 and ord(c) <= 77:
+            s2 += chr(ord(c)+13)
+        elif ord(c) >= 78 and ord(c) <= 90:
+            s2 += chr(ord(c)+13-26)
+        elif ord(c) >= 97 and ord(c) <= 109:
+            s2 += chr(ord(c)+13)
+        elif ord(c) >= 110 and ord(c) <= 122:
+            s2 += chr(ord(c)+13-26)
+        else:
+            s2 += c
+    return s2
+
+while True:
+    sent = input()
+    if sent == 'end':
+        break
+    print(rot13(sent))
 ```
 
 ### Anagram (★★)
