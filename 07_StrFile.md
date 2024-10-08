@@ -85,7 +85,21 @@ while True:
 Solutions:
 
 ```python
-#Solution Here
+str1 = list(''.join(input().lower().split()))
+str2 = list(''.join(input().lower().split()))
+
+ana = 'YES'
+if len(str1) != len(str2):
+    ana = 'NO'
+else:
+    for c in str1:
+        if c in str2:
+            str2.remove(c)
+        else:
+            ana = 'NO'
+            break
+
+print(ana)
 ```
 
 ### File Min Max Average (★★)
