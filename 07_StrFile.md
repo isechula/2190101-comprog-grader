@@ -51,6 +51,30 @@ if newer_sentence[0] in alpha_upper:
 print(newer_sentence)
 ```
 
+```python
+valid_characters = "abcdefghijklmnopqrstuvwxyz0123456789"
+
+#something something oneliners
+#replace all non valid characters with spaces
+#then turn into a string to be stripped
+#then turn back into an array so it stays mutable
+letters = list("".join([i if i in valid_characters else " " for i in input().lower()]).strip())
+
+#javascript programmers rejoice!
+camelCase = ""
+
+#since all characters start in lowercase
+#if we encounter a space just make the next letter uppercase
+for i in range(len(letters)):
+    letter = letters[i]
+    if letter == " ":
+        letters[i+1] = letters[i+1].upper()
+    else:
+        camelCase += letter
+
+print(camelCase)
+```
+
 ### Rot13 (★★)
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/07_StrFile/07_StrFile_​21.pdf)\
@@ -77,6 +101,32 @@ while True:
     if sent == 'end':
         break
     print(rot13(sent))
+```
+
+```python
+#solution where you dont have to remember any unicode tricks
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+def rot13(string):
+    output = ""
+    for letter in string:
+        if letter.lower() not in alphabet:
+            output += letter
+            continue
+        
+        cypher_letter = alphabet[(alphabet.index(letter.lower()) + 13) % 26]
+        if letter.isupper():
+            output += cypher_letter.upper()
+        else:
+            output += cypher_letter
+    return output
+
+while True:
+    string = input()
+    
+    if string == "end":
+        break
+    print(rot13(string))
 ```
 
 ### Anagram (★★)
