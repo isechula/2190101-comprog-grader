@@ -254,7 +254,81 @@ else:
 Solutions:
 
 ```python
-#Solution Here
+#i know they want me to do like functions for this one
+#but this is just easier since its not like any of the seperate checks are reused
+password = input()
+problems = []
+
+#atleast 8 characters
+if len(password) < 8:
+    problems.append("Less than 8 characters")
+
+#atleast 1 lower, upper, number and symbol
+has_lower, has_upper, has_number, has_symbol = [False]*4
+for letter in password:
+    if letter.islower():
+        has_lower = True
+    elif letter.isupper():
+        has_upper = True
+    elif letter.isnumeric():
+        has_number = True
+    elif not letter.isalnum():
+        has_symbol = True
+        
+if not has_lower:
+    problems.append("No lowercase letters")
+
+if not has_upper:
+    problems.append("No uppercase letters")
+    
+if not has_number:
+    problems.append("No numbers")
+
+if not has_symbol:
+    problems.append("No symbols")
+
+
+#make 4 letter long clusters for checking
+four_letter_clusters = []
+for i in range(len(password) - 3):
+    four_letter_clusters.append(password[i:i+4])
+
+#no 4 repeating character
+for cluster in four_letter_clusters:
+    if cluster[0] == cluster[1] == cluster[2] == cluster[3]:
+        problems.append("Character repetition")
+        break
+        
+#no consecutive numbers letter or keyboard keys
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+numbers = "01234567890"
+qwerty = "!@#$%^&*()_+qwertyuiopasdfghjklzxcvbnm"
+
+for cluster in four_letter_clusters:
+    cluster = cluster.lower()
+    if cluster in numbers or cluster in numbers[::-1]:
+        problems.append("Number sequence")
+        break
+    
+for cluster in four_letter_clusters:
+    cluster = cluster.lower()     
+    if cluster in alphabet or cluster in alphabet[::-1]:
+        problems.append("Letter sequence")
+        break
+    
+for cluster in four_letter_clusters:
+    cluster = cluster.lower()
+    if cluster in qwerty or cluster in qwerty[::-1]:
+        problems.append("Keyboard pattern")
+        break
+
+#output
+if len(problems) == 0:
+    print("OK")
+else:
+    #putting knowledge to use is always fun
+    print(*problems, sep="\n")
+
 ```
 
 ### File Merge (★★★)
