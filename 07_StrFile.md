@@ -550,3 +550,65 @@ for i in range(len(ordered)):
     print(' '.join(ordered[i]))
 ```
 
+```python
+def read_next(file):
+    return file.readline().strip()
+
+#returns true if id1 comes before id2
+def compare(id1, id2):
+    id1, id2 = id1.split()[0], id2.split()[0]
+    faculty_id1, faculty_id2 = int(id1[-2:]), int(id2[-2:])
+    student_id1, student_id2 = int(id1[:8]), int(id2[:8])
+    #if faculty id is greater OR faculty id is equal and id is greater
+    return faculty_id1 < faculty_id2 or (faculty_id1 == faculty_id2 and student_id1 < student_id2)
+
+file_names = input().split()
+file_1 = open(file_names[0], "r")
+file_2 = open(file_names[1], "r")
+
+#since data inside each file is already sorted
+#we can "merge" the data into a new sorted list
+#by reading from both files then keeping the
+#smallest data from the 2
+#repeat until no data remains
+
+current_data = read_next(file_1)
+
+#for tracking which file to read from
+#true indicates reading from file 2, else file 1
+read_file_2 = True
+while True:
+    
+    if read_file_2:
+        next_data = read_next(file_2)
+    else:
+        next_data = read_next(file_1)
+    
+    #exit condition
+    #if next data is empty just print all remaining data in the other file
+    if next_data == "":
+        while True:
+            #if we were reading from file 2 (and that was empty)
+            #the remaining file must be file 1 (and vice versa)
+            if read_file_2:
+                next_data = read_next(file_1)
+            else:
+                next_data = read_next(file_2)
+            
+            if next_data == "":
+                break
+            print(next_data)
+        break
+    
+    if compare(next_data, current_data):
+        print(next_data)
+    else:
+        print(current_data)
+        current_data = next_data
+        read_file_2 = not read_file_2
+
+
+file_1.close()
+file_2.close()
+```
+
