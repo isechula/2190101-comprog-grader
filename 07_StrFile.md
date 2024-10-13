@@ -372,8 +372,62 @@ else:
 
 [Instructions](https://github.com/isechula/2190101-comprog-grader/blob/main/pdfs/07_StrFile/07_StrFile_​33.pdf)\
 Solutions:
+The grader is broken
 
 ```python
-#Solution Here
+# This code sucks, I know.
+file1,file2 = input().split()
+file1 = open(file1, "r")
+file2 = open(file2, "r")
+
+def read_next(f):
+    while True:
+        t = f.readline()
+        if len(t) == 0:
+            break
+        x = t.strip().split()
+        if len(x) == 2:
+            return x[0], x[1]
+    return '', ''
+
+ordered = []
+
+id1,grade1 = read_next(file1)
+id2,grade2 = read_next(file2)
+while True:
+    if id1 == '' and id2 == '':
+        break
+    if id1 == '':
+        while True:
+            ordered.append([id2,grade2])
+            id2,grade2 = read_next(file2)
+            if id2 == '':
+                break
+    if id2 == '':
+        while True:
+            ordered.append([id1,grade1])
+            id1,grade1 = read_next(file1)
+            if id1 == '':
+                break
+    else:
+        if id1[-2:] < id2[-2:]:
+            ordered.append([id1,grade1])
+            id1,grade1 = read_next(file1)
+        elif id2[-2:] < id1[-2:]:
+            ordered.append([id2,grade2])
+            id2,grade2 = read_next(file2)
+        elif id1[-2:] == id2[-2:]:
+            if id1[:-2] < id2[:-2]:
+                ordered.append([id1,grade1])
+                id1,grade1 = read_next(file1)
+            else:
+                ordered.append([id2,grade2])
+                id2,grade2 = read_next(file2)
+
+file1.close()
+file2.close()
+
+for i in range(len(ordered)):
+    print(' '.join(ordered[i]))
 ```
 
