@@ -587,6 +587,7 @@ while True:
     #exit condition
     #if next data is empty just print all remaining data in the other file
     if next_data == "":
+        print(current_data)
         while True:
             #if we were reading from file 2 (and that was empty)
             #the remaining file must be file 1 (and vice versa)
