@@ -157,6 +157,43 @@ exec(input().strip())
 Solutions:
 
 ```python
-#Solution Here
+
+def total(pocket):
+    return sum([int(k) * int(pocket[k]) for k in pocket])
+
+def take(pocket, money_in):
+    for bank_note in money_in:
+        if bank_note in pocket:
+            pocket[bank_note] += money_in[bank_note]
+        else:
+            pocket[bank_note] = money_in[bank_note]
+
+def pay(pocket, amount):
+    removed = {}
+    #find largest banknote < amount
+    #subtract that from amount
+    #repeat till no bank notes remain
+    for bank_note in sorted(pocket.keys())[::-1]:
+        banks_available = pocket.get(bank_note, 0)
+        bank_value = int(bank_note)
+
+        if banks_available == 0:
+            continue
+        
+        if bank_value < amount:
+            remove_count = min(banks_available, amount // bank_value)
+            removed[bank_note] = remove_count
+            amount -= remove_count * bank_value
+    
+    #if there is any money left over, that means that we cant pay in an exact value
+    if amount != 0:
+        return {}
+    
+    #remove money from pocket if we can pay an exact amount
+    for bank_note in removed:
+        pocket[bank_note] -= removed[bank_note]
+    return removed
+
+exec(input().strip())
 ```
 
