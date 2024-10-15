@@ -4,7 +4,21 @@
 Solutions:
 
 ```python
-#Solution Here
+#at time of writing there are 3 test cases and none of them test the keys() function lol
+def keys(dictionary, target_value):
+    output = []
+    for key in dictionary:
+        if dictionary[key] == target_value:
+            output.append(key)
+    return output
+
+def reverse(dictionary):
+    output = {}
+    for key in dictionary:
+        output[dictionary[key]] = key
+    return output
+
+exec(input().strip())
 ```
 
 ### Nicknames (★)
@@ -13,7 +27,14 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+names = {}
+for i in range(int(input())):
+    first_name, nickname = input().strip().split()
+    names[first_name] = nickname
+    names[nickname] = first_name
+
+for i in range(int(input())):
+    print(names.get(input().strip(), "Not found"))
 ```
 
 ### Char Count (★★)
@@ -22,7 +43,22 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+letters = {}
+for letter in input().lower():
+    if not letter.isalpha():
+        continue
+    
+    if letter in letters:
+        letters[letter] += 1
+    else:
+        letters[letter] = 1
+
+#i feel magical
+#basically turn the dict an array with the form [[-count1, letter1], ...]
+#then sort that array ascending, which makes it sort by descending count then ascending letters
+#(just be sure to invert the count again)
+for num, letter in sorted([[-letters[k],k] for k in letters]):
+    print(f"{letter} -> {-num}")
 ```
 
 ### Ice Cream Sales (★★)
