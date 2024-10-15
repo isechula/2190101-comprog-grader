@@ -47,7 +47,7 @@ letters = {}
 for letter in input().lower():
     if not letter.isalpha():
         continue
-    
+
     if letter in letters:
         letters[letter] += 1
     else:
@@ -89,6 +89,32 @@ else:
     top_sales = sorted([-ice_cream_sales[k], k] for k in ice_cream_sales)
     print("Top sales: " + ", ".join([arr[1] for arr in top_sales if arr[0] == top_sales[0][0]]))
 
+
+```
+
+```python
+
+import re
+menu = dict()
+sales = dict()
+for i in range(int(input())):
+    k,v = input().split()
+    menu[k] = float(v)
+
+for i in range(int(input())):
+    k,v = input().split()
+    if k in menu.keys():
+        if sales.get(k, False):
+            sales[k] += menu[k]*int(v)
+        else:
+            sales[k] = menu[k]*int(v)
+
+if sales:
+    print(f'Total ice cream sales: %.1f' % sum(sales.values()))
+    print(f'Top sales: {re.sub(r"['\]\[]","",str([k for k in sorted(sales.keys()) if sales[k] == max(sales.values())]))}')
+
+else:
+    print("No ice cream sales")
 
 ```
 
@@ -146,7 +172,7 @@ def text2keys(text):
 
 def keys2text(keys):
     return "".join([keys_to_text[k] for k in keys.split()])
-        
+
 exec(input().strip())
 
 ```
@@ -179,16 +205,16 @@ def pay(pocket, amount):
 
         if banks_available == 0:
             continue
-        
+
         if bank_value < amount:
             remove_count = min(banks_available, amount // bank_value)
             removed[bank_note] = remove_count
             amount -= remove_count * bank_value
-    
+
     #if there is any money left over, that means that we cant pay in an exact value
     if amount != 0:
         return {}
-    
+
     #remove money from pocket if we can pay an exact amount
     for bank_note in removed:
         pocket[bank_note] -= removed[bank_note]
@@ -196,4 +222,3 @@ def pay(pocket, amount):
 
 exec(input().strip())
 ```
-
