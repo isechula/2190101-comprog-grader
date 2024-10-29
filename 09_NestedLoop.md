@@ -36,7 +36,7 @@ def eratosthenes(upper_bound):
         if not is_primes[i-2]:
             i += 1
             continue
-        for j in range(2*i,upper_bound+1,i):
+        for j in range(i**2,upper_bound+1,i):
             is_primes[j-2] = False
         i += 1
     prime_numbers = []
