@@ -154,7 +154,7 @@ def inversions(x):
 def solvable(t):
     if len(t) % 2 == 0:
         #one liner possible (but unreadable)
-        # (inversions(flatten(t)) % 2 == 0) ^ (row_number(t, 0) % 2 == 0)
+        #return (inversions(flatten(t)) % 2 == 0) ^ (row_number(t, 0) % 2 == 0)
         # ^ is xor
         if inversions(flatten(t)) % 2 == 0:
             return row_number(t, 0) % 2 == 1
