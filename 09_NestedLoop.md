@@ -129,7 +129,42 @@ exec(input().strip())
 Solutions:
 
 ```python
-#Solution Here
+#https://2190101.nattee.net/problems/926/get_statement/09_MoreDC_25.pdf
+def row_number(t, e):
+    for index, row in enumerate(t):
+        if e in row:
+            return index
+
+def flatten(t):
+    output = []
+    for row in t:
+        for num in row:
+            if num != 0:
+                output.append(num)
+    return output
+
+def inversions(x):
+    count = 0
+    for i in range(len(x)):
+        for j in range(i, len(x)):
+            if x[i] > x[j]:
+                count += 1
+    return(count)
+
+def solvable(t):
+    if len(t) % 2 == 0:
+        #one liner possible (but unreadable)
+        # (inversions(flatten(t)) % 2 == 0) ^ (row_number(t, 0) % 2 == 0)
+        # ^ is xor
+        if inversions(flatten(t)) % 2 == 0:
+            return row_number(t, 0) % 2 == 1
+        else:
+            return row_number(t, 0) % 2 == 0
+    else:
+        return inversions(flatten(t)) % 2 == 0
+        
+exec(input().strip())
+
 ```
 
 ### Pythagorean Triple (★★★)
