@@ -4,7 +4,15 @@
 Solutions:
 
 ```python
-#Solution Here
+union = intersect = set()
+for i in range(int(input())):
+    if i == 0:
+        union = intersect = set(input().split())
+        continue
+    current = set(input().split())
+    union = union | current
+    intersect = intersect & current
+print(f'{len(union)}\n{len(intersect)}')
 ```
 
 ### Winner (★)
@@ -13,7 +21,11 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+teams = []
+for i in range(int(input())):
+    teams.append(input().split())
+win, lose = zip(*teams)
+print(sorted(list(set(win) - set(lose))))
 ```
 
 ### Database (★)
