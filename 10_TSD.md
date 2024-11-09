@@ -211,7 +211,42 @@ exec(input().strip())
 Solutions:
 
 ```python
-#Solution Here
+#converts a dict of power -> coef into
+#a tuple list [(coef, power)]
+def dict_to_poly(coefs):
+    output = []
+    for power, coef in coefs.items():
+        if coef != 0:
+            output.append([-power, coef])
+    return [(i[1],-i[0]) for i in sorted(output)]
+
+def add_poly(p1,p2):
+    coefs = {}
+    for terms in [*p1, *p2]:
+        if terms[1] in coefs:
+            coefs[terms[1]] += terms[0]
+        else:
+            coefs[terms[1]] = terms[0]
+            
+    return dict_to_poly(coefs)
+
+def mult_poly(p1,p2):
+    coefs = {}
+    
+    for terms_1 in p1:
+        for terms_2 in p2:
+            power = terms_1[1] + terms_2[1]
+            coef = terms_1[0] * terms_2[0]
+            
+            if power in coefs:
+                coefs[power] += coef
+            else:
+                coefs[power] = coef
+    
+    return dict_to_poly(coefs)
+
+for i in range(3):
+    exec(input().strip())
 ```
 
 ### Student Info (★★★)
@@ -220,7 +255,28 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+students = []
+
+for i in range(int(input())):
+    students.append(input().split())
+
+conditions = input().split()
+matches = []
+for student in students:
+    match = True
+    for condition in conditions:
+        #grader doesnt want name matches
+        if condition not in student[1:]:
+            match = False
+            break
+        
+    if match:
+        matches.append(student)
+
+if matches == []:
+    print("Not Found")
+else:
+    print(*sorted([" ".join(i) for i in matches]), sep="\n")
 ```
 
 ### Dept Selection (★★★)
@@ -229,7 +285,30 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+slots = {}
+
+for i in range(int(input())):
+    faculty, count = input().split()
+    if faculty in slots:
+        slots[faculty] += count
+    else:
+        slots[faculty] = int(count)
+
+students = []
+for i in range(int(input())):
+    student_info = input().split()
+    #-score, id, [preferences]
+    students.append([-float(student_info[1]), student_info[0], student_info[2:]])
+
+results = []
+for student in sorted(students):
+    for faculty in student[2]:
+        if slots.get(faculty, 0) > 0:
+            results.append(f"{student[1]} {faculty}")
+            slots[faculty] -= 1
+            break
+
+print(*sorted(results), sep="\n")
 ```
 
 ### Sky Train (★★★)
@@ -238,6 +317,31 @@ Solutions:
 Solutions:
 
 ```python
-#Solution Here
+connections = {}
+
+while True:
+    data = input().split()
+    if len(data) == 1:
+        break
+    
+    if data[0] in connections:
+        connections[data[0]].append(data[1])
+    else:
+        connections[data[0]] = [data[1]]
+    #connections are symmetric
+    if data[1] in connections:
+        connections[data[1]].append(data[0])
+    else:
+        connections[data[1]] = [data[0]]
+    
+    
+
+valid_connections = set([data[0]])
+for connection in connections.get(data[0], []):
+    valid_connections.add(connection)
+    for sub_connection in connections.get(connection, []):
+        valid_connections.add(sub_connection)
+
+print(*sorted(list(valid_connections)), sep="\n")
 ```
 
